@@ -1,0 +1,59 @@
+
+📌 **Course Filter Application – Final UI Structure**
+
+🔧 **Project**: UOP Study Abroad Course Filter System  
+🎯 **Objective**: To allow students to search and view equivalent UOP courses offered at partner universities abroad.
+
+---
+
+### ✅ Key UI Components:
+
+1. **Search Bar**
+   - Label: “Search for courses”
+   - Input field with search icon/button
+   - Handles keywords like "AI", "ML", "Data Science"
+
+2. **Results Table**
+   - Headers: Country | University | Course Code | Equivalent Code | Equivalent Name
+   - Dynamically displays search results
+   - Clean spacing and consistent font
+
+3. **Styling and Usability**
+   - Responsive design
+   - White background with subtle borders
+   - Blue button for clear call-to-action
+   - Aligned text and uniform column widths
+
+---
+
+### 🔐 User Roles
+
+- **Student (Read-Only)**: Can search and export matching course data
+- **Advisor** *(future enhancement)*: Can view history of searches
+- **Admin**: Will manage course equivalency data (upload/update)
+
+---
+
+### 🛠️ Technologies (Planned/Used)
+
+- **Frontend**: React.js
+- **Backend**: Node.js + Express
+- **Database**: MongoDB (local or Atlas)
+- **Styling**: Tailwind CSS
+- **Authentication**: TBD
+- **Export**: CSV button for student reports
+
+---
+
+### 📎 Attached
+- Finalized UI Diagram with search filter and course equivalency
+- (Optional) JSON or CSV mock data file to test
+
+---
+
+📤 **Next Steps**
+- Frontend development completion (current phase)
+- Backend schema & API setup
+- Final data population
+- Testing & feedback loop
+

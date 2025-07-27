@@ -1,0 +1,44 @@
+
+### Course Filter Application – Final UI Overview**
+
+### Purpose 
+To help students easily search for study abroad courses that match University of the Pacific (UOP) courses.
+
+---
+
+Q. What the Application Does:
+
+- Students can **type a keyword** (like “AI” or “Business”) and see a **list of matching international courses**.
+- Each result shows the:
+  - Country
+  - Partner University
+  - Course Code & Name
+  - Equivalent UOP Cousrse
+
+---
+
+###  Example Output:
+
+| Country | University              | Course Code | UOP Code | UOP Course Name                  |
+|---------|--------------------------|-------------|----------|----------------------------------|
+| Canada  | University of Toronto    | AI101       | UOP101   | Introduction to AI               |
+| Canada  | McGill University        | CS520       | UOP201   | Foundations of AI                |
+| Japan   | Kyoto University         | COMP401     | UOP301   | AI and Robotics                  |
+| Germany | Technical Uni in Munich  | CS300       | UOP401   | AI Basics                        |
+
+---
+
+###  Who Will Use It/ Roles:
+
+- Students**: Can search and explore course matches  
+-Admin Staff**: Can update or manage course information  
+- (Advisors may get access in the future for insights into student searches)*
+
+---
+
+###  Current Status:
+
+-  User interface design is finalized (search bar + results table)
+-  Development is in progress
+- Ready for internal feedback and testing soon next week.
+

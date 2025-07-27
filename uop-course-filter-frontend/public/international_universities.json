@@ -1,0 +1,1723 @@
+{
+    "universities": [
+        {
+            "country": "France",
+            "partner_university": "Burgundy School of Business"
+        },
+        {
+            "country": "France",
+            "partner_university": "Université Grenoble Alpes"
+        },
+        {
+            "country": "Germany",
+            "partner_university": "Esslingen University"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Istituto Lorenzo de Medici"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "University of Parma"
+        },
+        {
+            "country": "Japan",
+            "partner_university": "Kwansei Gakuin University"
+        },
+        {
+            "country": "Japan",
+            "partner_university": "Waseda University",           
+            "courses": [
+                {
+                    "partner_course_code": "LANE301F",
+                    "partner_course_name": "Intensive Studies(Japanese Visual Culture  and Media)",
+                    "pacific_course_code": "MEDX197",
+                    "pacific_course_name": "Independent Research",
+                    "pacific_course_credit":"1 or 4",
+                    "pacific_major" : "Music, Applied Music",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                    "partner_course_code": "LANS301F",
+                    "partner_course_name": "APM-Hispanismin Japan",
+                    "pacific_course_code": "ASIA 193",
+                    "pacific_course_name": "Special Topics",
+                     "pacific_course_credit":"1 or 4",
+                       "pacific_major" : "Modern Language & Literature",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                   "partner_course_code": "LANE301F",
+                    "partner_course_name": "Intensive studies 55(Seminar : East asian cultures in global perspectives)",
+                    "pacific_course_code": "ASIA 193",
+                    "pacific_course_name": "Special Topics",
+                    "pacific_major" : "Modern Language & Literature",
+                     "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                    "partner_course_code": "LANE301F",
+                    "partner_course_name": "Intensive Studies 27 (Japanese Culture and Society 2)",
+                    "pacific_course_code": "LANG 193",
+                    "pacific_course_name": "Special Topics",
+                    "pacific_major" : "Modern Language & Literature",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                   "partner_course_code": "LANE301F",
+                    "partner_course_name": "Intensive Studies 21 (Education 1)",
+                    "pacific_course_code": "STDY 193",
+                    "pacific_course_name": "Special Topics",
+                    "pacific_major" : "Education",
+                     "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                    "partner_course_code": "LANE301F",
+                    "partner_course_name": "Intensive Studies 20 (Introduction to Japanese Visual and Performing Arts 3) ",
+                    "pacific_course_code": "THEA 113",
+                    "pacific_course_name": "Theatre History",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "ARTT281S",
+                    "partner_course_name": "Japan's Living Theater (TCS Advanced Seminar)",
+                    "pacific_course_code": "THEA 113",
+                    "pacific_course_name": "Theatre History",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                   "partner_course_code": "GENX201S",
+                    "partner_course_name": "Minorities and Law the United States",
+                    "pacific_course_code": "POLS 093",
+                    "pacific_course_name": "Special Topics",
+                    "pacific_major" : "Political Science",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                    "partner_course_code": "LITE217L",
+                    "partner_course_name": "Gender and Minority Studies in English Literature",
+                    "pacific_course_code": "GEND 011",
+                    "pacific_course_name": "Introduction to Gender Studies",
+                    "pacific_major" : "Gender Studies",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "LANE201F",
+                    "partner_course_name": "English Language Course (Business English) 02",
+                    "pacific_course_code": "ENGL 082",
+                    "pacific_course_name": "How English Works",
+                    "pacific_major" : "English",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Fall 2024"
+                },
+                 {
+                    "partner_course_code": "CMFE221L",
+                    "partner_course_name": "Theories of Visual Culture [J] 01",
+                    "pacific_course_code": "UOPWDU001",
+                    "pacific_course_name": "Special Topics",
+                    "pacific_major" : "Media X",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "ECNA311L",
+                    "partner_course_name": "International Trade [J] 01",
+                    "pacific_course_code": "MEDX 091",
+                    "pacific_course_name": "Critical Media",
+                    "pacific_major" : "Media X",
+                    "pacific_course_credit":"1 or 4",
+                    "approval_term": "Fall 2024"
+                },
+                 {
+                    "partner_course_code": "ARTF101L",
+                    "partner_course_name": "Theory of Cinematography/moving image I",
+                    "pacific_course_code": "UOPWDU002",
+                    "pacific_course_name": "N/A",
+                    "pacific_major" : "N/A",
+                    "pacific_course_credit":"N/A",
+
+                    "approval_term": "Fall 2024"
+                },
+
+            {
+                    "partner_course_code": "CMFM111L",
+                    "partner_course_name": "Philosophy of Aesthetic Sensibility",
+                    "pacific_course_code": "UOPWDU003",
+                    "pacific_course_name": "N/A",
+                    "pacific_course_credit":"N/A",
+                    "pacific_major" : "N/A",
+                    "approval_term": "Fall 2024"
+                },
+                 {
+                    "partner_course_code": "CMFE161L",
+                    "partner_course_name": "Occultism in art",
+                    "pacific_course_code": "UOPWDU004",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                     "pacific_major" : "N/A",
+                    "approval_term": "Fall 2024"
+                },
+
+                {
+                    "partner_course_code": "SOCX21ZL",
+                    "partner_course_name": "Psychology of Self Consciousness",
+                    "pacific_course_code": "UOPWDU005",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                     "pacific_major" : "N/A",
+                    "approval_term": "Fall 2024"
+                },
+                
+                {
+                    "partner_course_code": "PSYX261L",
+                    "partner_course_name": "Forensic and Criminal Psychology",
+                    "pacific_course_code": "UOPWDU006",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                    "approval_term": "Fall 2024"
+                },
+                {
+                    "partner_course_code": "PSYX181L",
+                    "partner_course_name": "Psychology of Advertising",
+                    "pacific_course_code":  "UOPWDU007",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                    "approval_term": "Fall 2024"
+                },
+                {
+                    "partner_course_code": "ARTH121L",
+                    "partner_course_name": "History of Buddhist Art",
+                    "pacific_course_code": "UOPWDU008",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                    "approval_term": "Fall 2024"
+                },
+
+                {
+                    "partner_course_code": "LITJ171L",
+                    "partner_course_name": "Cultural History of the Japanese Language",
+                    "pacific_course_code": "UOPWDU009",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"Modern Language and Culture",
+                    "approval_term": "Fall 2024"
+                }
+                  
+                ]
+
+            },
+
+        {
+            "country": "Japan",
+            "partner_university": "Kansai Gaidai University",
+            "courses": [
+                {
+                    "partner_course_code": "UOPKGU001",
+                    "partner_course_name": "Gender and Sexuality in Japanese : Norms , Practice, and Selves in Motion",
+                    "pacific_course_code": "ANTH 153",
+                    "pacific_course_name": "Language and Culture",
+                     "pacific_major": "Modern Language and Culture",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+              
+                {
+                    "partner_course_code": "UOPKGU002",
+                    "partner_course_name": "Foreign Policy Analysis: Cases from Asia",
+                    "pacific_course_code": "POLS 011",
+                    "pacific_course_name": "Upper Division Political Science: Comparative Politics",
+                    "pacific_major": "Political Science",
+                      "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+
+                {
+                    "partner_course_code": "UOPKGU003",
+                    "partner_course_name": "Japanese Politics and Public form a Theoretical Perspectives ",
+                    "pacific_course_code": "POLS 151",
+                    "pacific_course_name": "Upper Division Political Science: Principles of Comparative Politics",
+                    "pacific_major": "Political Science",
+                      "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+
+
+                {
+                    "partner_course_code": "UOPKGU004",
+                    "partner_course_name": "Japan and Globalization: a Cultural Approach",
+                    "pacific_course_code": "ANTH 153",
+                    "pacific_course_name": "Language and Culture",
+                    "pacific_major":  "Modern Language and Culture",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+
+                {
+                    "partner_course_code": "UOPKGU005",
+                    "partner_course_name": "Japan and Globalization: a Cultural Approach",
+                    "pacific_course_code": "ANTH 153",
+                    "pacific_course_name": "Language and Culture",
+                    "pacific_major":  "Modern Language and Culture",
+                      "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                  {
+                    "partner_course_code": "POLS 051",
+                    "partner_course_name": "Can We Enforce Human Rights",
+                    "pacific_course_code": "POLS 051",
+                    "pacific_course_name": "Upper Division Political Science: International Relations ",
+                    "pacific_major":  "Political Science",
+                      "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                
+                {
+                    "partner_course_code": "Studio Art",
+                    "partner_course_name": "Manga Drawing",
+                    "pacific_course_code": "UOPKGU006",
+                    "pacific_course_name": "N/A",
+                      "pacific_course_credit": "N/A",
+                      "pacific_major":  "N/A",
+                    "approval_term": "Spring 2024"
+                },
+                
+                {
+                    "partner_course_code": "JPN",
+                    "partner_course_name": "Japansese",
+                    "pacific_course_code": "JAPN 011B",
+                    "pacific_course_name": "First-Year Japanese",
+                     "pacific_major":  "Modern Language and Culture",
+
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "Creative Industres",
+                    "partner_course_name": "Culture & Creative Industries in Japan/East Asia",
+                    "pacific_course_code": "JASIA 124",
+                    "pacific_course_name": "Society, Gender and Culture in East Asia",
+                     "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "LEC",
+                    "partner_course_name": "Marketing Across Cultures (CGE)",
+                    "pacific_course_code": "UOPKGU007",
+                    "pacific_course_name": "N/A",
+                     "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"N/A",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "LEC",
+                    "partner_course_name": "Japanese Msuic",
+                    "pacific_course_code": "UOPKGU008",
+                    "pacific_course_name": "N/A",
+                     "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"N/A",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "LEC",
+                    "partner_course_name": "Creatures, Monsters, and Heroes of Japanese Pop Cultres(CGE)",
+                    "pacific_course_code": "MEDX 193",
+                    "pacific_course_name": "Speacial Topics",
+                     "pacific_major":  "Media X",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "LEC",
+                    "partner_course_name": "Creatures, Monsters, and Heroes of Japanese Pop Cultres(CGE)",
+                    "pacific_course_code": "MEDX 193",
+                    "pacific_course_name": "Speacial Topics",
+                     "pacific_major":  "Media X",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "LEC",
+                    "partner_course_name": "Kanji and Reading 1",
+                    "pacific_course_code": "UOPKGU009",
+                    "pacific_course_name": "N/A",
+                     "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"N/A",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "LEC",
+                    "partner_course_name": "Koto Basics ",
+                    "pacific_course_code": "UOPKGU010",
+                    "pacific_course_name": "N/A",
+                "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Japanese 4",
+                    "pacific_course_code": "JAPN 125",
+                    "pacific_course_name": "Advance Japanese I",
+                     "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Kanji and Reading 4",
+                    "pacific_course_code": "JAPN 126",
+                    "pacific_course_name": "Advance Japanese II",
+                    "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Culture, power, and Belonging",
+                    "pacific_course_code": "ANTH 172",
+                    "pacific_course_name": "Culture & power",
+                     "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Deaf World Japan",
+                    "pacific_course_code": "ANTH 153",
+                    "pacific_course_name": "Language & Culture",
+                    "pacific_major":  "Modern Language and Culture",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                }
+
+            ]
+        },
+
+        {
+            "country": "Greece",
+            "partner_university": "American College of Thessaloniki",
+            "courses": [
+                {
+                    "partner_course_code": "GREEK101",
+                    "partner_course_name": "Beginning Modern Greek",
+                    "pacific_course_code": "CLASS 110",
+                    "pacific_course_name": "Greek Literure in America",
+                     "pacific_major": "Modern Language and Culture",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                },
+                {
+                    "partner_course_code": "Art Hist 101",
+                    "partner_course_name": "Greek Architecture Ancient to Medieval ",
+                    "pacific_course_code": "ARTH 116",
+                    "pacific_course_name": "Contemporary World Art 1945-Present",
+                     "pacific_major": "Modern Language and Culture",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                },
+                {
+                    "partner_course_code": "Physiology 340",
+                    "partner_course_name": "Physiology of Addiction",
+                    "pacific_course_code": "N/A",
+                    "pacific_course_name": "Psychology",
+                     "pacific_major": "Psychology",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                },
+                {
+                    "partner_course_code": "Physiology 205",
+                    "partner_course_name": "Research Methods & Statistics",
+                    "pacific_course_code": "PSYSC 101",
+                    "pacific_course_name": "Research Methods & Statistics I",
+                     "pacific_major": "Psychology",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                },
+                {
+                    "partner_course_code": "Physiology 101",
+                    "partner_course_name": "Introduction to Philosophy & Critical Reasoning",
+                    "pacific_course_code": "PHIL 037",
+                    "pacific_course_name": "Intoruction to Logic",
+                     "pacific_major": "Psychology",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2023"
+                }
+
+            ]},
+
+
+
+
+ {
+            "country": "Spain",
+            "partner_university": "Universidad de Sevilla",
+      
+      "courses": [
+                {
+                    "partner_course_code": "166001",
+                    "partner_course_name": "Cultural Anthropology of Arts",
+                    "pacific_course_code": "ANTH 053",
+                    "pacific_course_name": "Cultural Anthropology",
+                     "pacific_major":"Anthropology",
+                     "pacific_course_credit":"3",
+                    "approval_term": "Spring 2022"
+                },
+                {
+                    "partner_course_code": "1660014",
+                    "partner_course_name": "Modern History",
+                    "pacific_course_code": "HIST 130",
+                    "pacific_course_name": "Modern Latin America",
+                     "pacific_major":"Psychology",
+                     "pacific_course_credit":"3",
+                    "approval_term": "Spring 2022"
+                },
+                {
+                    "partner_course_code": "2350005",
+                    "partner_course_name": "Classic Language(Latin)",
+                    "pacific_course_code": "LATN 011A",
+                    "pacific_course_name": "First Year Latin",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"3",
+                    "approval_term": "Spring 2022"
+                },
+                {
+                    "partner_course_code": "1760012",
+                    "partner_course_name": "Data Design and Analysis in Psychology II",
+                    "pacific_course_code": "PSYC 101",
+                    "pacific_course_name": "Research Methods & Statistics I",
+                     "pacific_major":"Psychology",
+                     "pacific_course_credit":"3",
+                    "approval_term": "Spring 2022"
+                }
+
+
+
+            ]
+
+        },
+
+        {
+            "country": "Egypt",
+            "partner_university": "The American University in Cairo"
+        },
+       {
+
+ "country": "Spain",
+            "partner_university": "Pablo de Olavide University Sevilla",
+            "courses": [
+                {
+                    "partner_course_code": "BUS 346E",
+                    "partner_course_name": "International Finances",
+                    "pacific_course_code": "BUSI 163",
+                    "pacific_course_name": "International Financial Management",
+                     "pacific_major":"Business Administration",
+                     "pacific_course_credit":"3",
+                    "approval_term": "Fall 2023"
+                },
+
+                {
+                    "partner_course_code": "BUS 359E",
+                    "partner_course_name": "Entrepreneurship & New Ventures",
+                    "pacific_course_code": "BUSI 173",
+                    "pacific_course_name": "Entrepreneurship Management Practice",
+                     "pacific_major":"Business Administration",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "SPAN 319E",
+                    "partner_course_name": "Spanish Culture & History ",
+                    "pacific_course_code": "ARTH 114",
+                    "pacific_course_name": "20th Cenctuary European Arts",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "AHIS 3001",
+                    "partner_course_name": "Catalonia and Spain through the Arts (English)",
+                    "pacific_course_code": "ARTH 114",
+                    "pacific_course_name": "20th Cenctuary European Arts",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "CS399",
+                    "partner_course_name": "Advnace usage of Spreadsheet",
+                    "pacific_course_code": "BUSI 100",
+                    "pacific_course_name": "Management Information Systems",
+                     "pacific_major":"Business Administration",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "AH 249",
+                    "partner_course_name": "Spanish Art & Architecture",
+                    "pacific_course_code": "ARTH 114",
+                    "pacific_course_name": "20th Cenctuary European Arts",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "504016",
+                    "partner_course_name": "Marketing Management I",
+                    "pacific_course_code": "BUSI 107",
+                    "pacific_course_name": "Marketing Management",
+                     "pacific_major":"Business Administration",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Leadership Business society",
+                    "pacific_course_code": "BUSI 109",
+                    "pacific_course_name": "Management & Organizational Behaviour",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "504024",
+                    "partner_course_name": " Operations Management I",
+                    "pacific_course_code": "BUSI 104",
+                    "pacific_course_name": "Operation Management",
+                     "pacific_major":"Business Administration",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                }
+
+            ]
+       },
+{
+            "country": "Netherlands",
+            "partner_university": "Conservatorium Van Amsterdam",
+            "courses": [
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Ensemble Project",
+                    "pacific_course_code": "MPER70",
+                    "pacific_course_name": "Orchestetra",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term":"Fall 2022"
+                },
+                {
+                    "partner_course_code": "406",
+                    "partner_course_name": "Chamber Music",
+                    "pacific_course_code": "MPER60",
+                    "pacific_course_name": "Chamber Music",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Povate Lesson",
+                    "pacific_course_code": "MPER112",
+                    "pacific_course_name": "Advance Applied Music",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Score Study",
+                    "pacific_course_code": "MPER157",
+                    "pacific_course_name": "Conducting",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Music History",
+                    "pacific_course_code": "MPER52",
+                    "pacific_course_name": "Performance Class",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Solyege Analysis",
+                    "pacific_course_code": "MPER157",
+                    "pacific_course_name": "Conducting",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "History of New Music",
+                    "pacific_course_code": "MPER52",
+                    "pacific_course_name": "Performance Class",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                }
+
+
+            ]},
+            {
+            "country": "Austria",
+            "partner_university": "University of Vienna",
+            "courses": [
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "German",
+                    "pacific_course_code": "GERM011",
+                    "pacific_course_name": "First Year German",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Music Performance",
+                    "pacific_course_code": "MPER70",
+                    "pacific_course_name": "Symphony Orchestetra",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Industrial performance Studies",
+                    "pacific_course_code": "MAPP 112",
+                    "pacific_course_name": "Advance Applied Music",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term":"Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Music Performance Workshop",
+                    "pacific_course_code": "MPER60",
+                    "pacific_course_name": "Chamber Music",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+
+{
+                    "partner_course_code": " ",
+                    "partner_course_name": "Music Turn of the Centuary",
+                    "pacific_course_code": "MHIS155",
+                    "pacific_course_name": "Topics in Music History",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                }
+
+            ]
+        },
+          {
+            "country": "South Korea",
+            "partner_university": "Yonsei University",
+            "courses": [
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Interpersonal Communication",
+                    "pacific_course_code": "ENGL 109",
+                    "pacific_course_name": "Professional Communication",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Plot in Fiction+ film",
+                    "pacific_course_code": "MEDX 011",
+                    "pacific_course_name": "Critical Media Marketing",
+                     "pacific_major":"Media X",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Korean Language",
+                    "pacific_course_code": "CHIN 011A",
+                    "pacific_course_name": "First Year Chinese",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Physics Lab",
+                    "pacific_course_code": "CHIN 011A",
+                    "pacific_course_name": "First Year Chinese",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                },
+                {
+                    "partner_course_code": " ",
+                    "partner_course_name": "Korean Popular Culture  + Korean Movie",
+                    "pacific_course_code": "MMGT 11",
+                    "pacific_course_name": "Music Industry Analysis",
+                     "pacific_major":"Music, Applied Music",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2022"
+                }
+
+                
+
+            ]
+        },
+
+       {
+            "country": "Mexico",
+            "partner_university": "University Anahuac Mayab",
+            "courses": [
+                {
+                    "partner_course_code": "3102",
+                    "partner_course_name": "Advance Spanish language",
+                    "pacific_course_code": "SPAN 141",
+                    "pacific_course_name": "Sintaxis, semantica y morgologica",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "406",
+                    "partner_course_name": "Neuroeducation",
+                    "pacific_course_code": "SPAN 193",
+                    "pacific_course_name": "Special Topics, Neuroeducation",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "4410",
+                    "partner_course_name": "Administraction y Direction Educativa",
+                    "pacific_course_code": "SPAN 193",
+                    "pacific_course_name": "Special Topics, Direction Education",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "1401",
+                    "partner_course_name": "Principios de Fotografia",
+                    "pacific_course_code": "GE2C",
+                    "pacific_course_name": "Visual and Performing Arts",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "2401",
+                    "partner_course_name": "Perspectivas Europia de la Communicacion y el Entertainmeintos",
+                    "pacific_course_code": "GE2C",
+                    "pacific_course_name": "Global Education",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                }
+
+            ]
+        },
+
+       
+        {
+            "country": "Botswana",
+            "partner_university": "University of Botswana",
+            "courses": [
+                {
+                    "partner_course_code": "POL202",
+                    "partner_course_name": "Classical Political Thoughts",
+                    "pacific_course_code": "POLS 130",
+                    "pacific_course_name": "Ancient to Medieval Political Theory",
+                     "pacific_major":"Political Science",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "POL301",
+                    "partner_course_name": "Modern Political Thoughts",
+                    "pacific_course_code": "POLS 132",
+                    "pacific_course_name": "Modern to Contemporary Political Theory",
+                     "pacific_major":"Political Science",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "POL202",
+                    "partner_course_name": "Public admistintration Botsawana",
+                    "pacific_course_code": "UOPUB001",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                      "pacific_major":"N/A",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "LAW432",
+                    "partner_course_name": "Jurisprudence",
+                    "pacific_course_code": "POLS 136",
+                    "pacific_course_name": "Jurisprudence",
+                     "pacific_major":"Political Science",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "ENS404",
+                    "partner_course_name": "Environmental Policy Analysis",
+                    "pacific_course_code": "INTL 174",
+                    "pacific_course_name": "Global Environmental Policy",
+                     "pacific_major":"Enviromental Studies",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "LAW234",
+                    "partner_course_name": "Consitutional Law",
+                    "pacific_course_code": "POLS 122",
+                    "pacific_course_name": "Constitutional Law",
+                     "pacific_major":"Political Science",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "DSW207",
+                    "partner_course_name": "Cultural Change in Botswana and Social Works",
+                    "pacific_course_code": "UOPUB002",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                      "pacific_major":"N/A",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "TRS105",
+                    "partner_course_name": "Religion of Botsawana",
+                    "pacific_course_code": "UOPUB003",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                      "pacific_major":"N/A",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "LAW138",
+                    "partner_course_name": "Law & The Environment",
+                    "pacific_course_code": "UOPUB004",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                      "pacific_major":"Environmental Studies",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "LAW138",
+                    "partner_course_name": "Politics of Gender",
+                    "pacific_course_code": "UOPUB005",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                      "pacific_major":"Political Science",
+                    "approval_term": "Spring 2020"
+                },
+                {
+                    "partner_course_code": "TRS106",
+                    "partner_course_name": "Ethics Classic Theory",
+                    "pacific_course_code": "UOPUB006",
+                    "pacific_course_name": "N/A",
+                     "pacific_course_credit":"N/A",
+                      "pacific_major":"N/A",
+                    "approval_term": "Spring 2020"
+                } 
+
+                
+
+            ]
+        },
+        {
+            "country": "Japan",
+            "partner_university": "Kwansei Gakuin University",
+            "courses": [
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Intense Japanese",
+                    "pacific_course_code": "JAPN 125",
+                    "pacific_course_name": "Advance Japanese I",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Kanji and Vocabulary",
+                    "pacific_course_code": "JAPN 125",
+                    "pacific_course_name": "Advance Japanese I",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Japanese Writing",
+                    "pacific_course_code": "JAPN 126",
+                    "pacific_course_name": "Advance Japanese II",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Japanese Speaking",
+                    "pacific_course_code": "JAPN 126",
+                    "pacific_course_name": "Advance Japanese II",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Japanese Reading",
+                    "pacific_course_code": "JAPN 126",
+                    "pacific_course_name": "Advance Japanese II",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+                {
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Language and Culture in Japan",
+                    "pacific_course_code": "JAPN 126",
+                    "pacific_course_name": "Advance Japanese II",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+
+{
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Japanese Usage",
+                    "pacific_course_code": "HIST 143",
+                    "pacific_course_name": "Modernization of Japan",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                },
+
+{
+                    "partner_course_code": "JLC",
+                    "partner_course_name": "Japanese Culture",
+                    "pacific_course_code": "JAPN 125",
+                    "pacific_course_name": "Advance Japanese I",
+                     "pacific_major":"Modern Language & Literature",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2023"
+                }
+
+
+
+            ]
+        },
+
+        {
+            "country": "Ghana",
+            "partner_university": "Ghana Institute of Management and Public Administration"
+        },
+        {
+            "country": "Jordan",
+            "partner_university": "Princess Sumaya University for Technology, King Talal School for Business Technology"
+        },
+        {
+            "country": "Morocco",
+            "partner_university": "University Mohammed VI Polytechnic"
+        },
+        {
+            "country": "South Africa",
+            "partner_university": "University of Cape Town"
+        },
+        {
+            "country": "United Arab Emirates",
+            "partner_university": "Abu Dhabi University"
+        },
+        {
+            "country": "Czech Republic",
+            "partner_university": "Charles University",          
+            "courses": [
+                {
+                    "partner_course_code": "CEM005P2",
+                    "partner_course_name": "Food Safety and Nutrition",
+                    "pacific_course_code":  "SOCI 108",
+                    "pacific_course_name": "Food, Culture and Society",
+                    "pacific_major":"Sociology",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2024"
+                },
+                 {
+                    "partner_course_code": "OVP13011",
+                    "partner_course_name": "Internship: Expereince & Seminar",
+                    "pacific_course_code": "SOCI 187A",
+                    "pacific_course_name": "Experiential Learning ",
+                    "pacific_major":"Sociology",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2024"
+                },
+
+                {
+                    "partner_course_code": "POLIS3001PRAG",
+                    "partner_course_name": "The Rise and Fall of Totalitarianism in Central Europe",
+                    "pacific_course_code": "SOCI 114",
+                    "pacific_course_name": "Social and Cultural Change",
+                    "pacific_major":"Sociology",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2024"
+                },
+                  {
+                    "partner_course_code": "SOCI3001PRAG",
+                    "partner_course_name": "Current Social Issues from the Global Perspective",
+                    "pacific_course_code": "SOCI 041",
+                    "pacific_course_name": "Social Problems",
+                    "pacific_major":"Sociology",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2024"
+                },
+                  {
+                    "partner_course_code": "ON2317018",
+                    "partner_course_name": "Sociology of Health and Illness",
+                    "pacific_course_code": "SOCI 125",
+                    "pacific_course_name": "Sociology of Health and Illness",
+                    "pacific_major":"Sociology",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2024"
+                },
+                {
+                    "partner_course_code": "JSM095",
+                    "partner_course_name": "Study of Political Mobilization and Social Movements",
+                    "pacific_course_code": "SOCI",
+                    "pacific_course_name": "Sicology Electives",
+                    "pacific_major":"Sociology",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2024"
+                },
+                {
+                    "partner_course_code": "JSM143",
+                    "partner_course_name": "Understanding Identity and Belonging",
+                    "pacific_course_code": "SOCI",
+                    "pacific_course_name": "Sicology Electives",
+                    "pacific_major":"Sociology",
+                     "pacific_course_credit":"4",
+                    "approval_term": "Fall 2024"
+                } ]
+
+            },
+        
+        {
+            "country": "Czech Republic",
+            "partner_university": "The Film and TV School of the Academy of Performing Arts"
+        },
+        {
+            "country": "Czech Republic",
+            "partner_university": "Architectural Institute in Prague"
+        },
+        {
+            "country": "Czech Republic",
+            "partner_university": "Art & Design Institute"
+        },
+        {
+            "country": "Czech Republic",
+            "partner_university": "University of New York in Prague"
+        },
+          {
+            "country": "China",
+            "partner_university": "Peking University",        
+            "courses": [
+                {
+                    "partner_course_code": "02080432",
+                    "partner_course_name": "Advanced Spoken Chinese II",
+                    "pacific_course_code": "CHIN 125",
+                    "pacific_course_name": "Interdisciplinary studies  Advanced Chinese",
+                    "pacific_major":"Modern Language & Literature",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                    "partner_course_code": "02035240",
+                    "partner_course_name": "Intensive Reading of Classics",
+                    "pacific_course_code": "CHIN 126",
+                    "pacific_course_name": "Interdisciplinary Studies Advance Chinese II",
+                     "pacific_major":"Modern Language & Literature",
+                    "pacific_course_credit":"4",
+                    "approval_term":  "Spring 2024"
+                },
+                 
+                 {
+                    "partner_course_code": "PKU001",
+                    "partner_course_name": "Introdcution to Busines Programming",
+                    "pacific_course_code": "COMP 061",
+                    "pacific_course_name": "Introduction to Programming for Data Science",
+                     "pacific_major":"Computer Science",
+                    "pacific_course_credit":"4",
+                    "approval_term":  "Spring 2024"
+                },
+                {
+                    "partner_course_code": "E2800070",
+                    "partner_course_name": "Business Chinese C",
+                    "pacific_course_code": "UOPPK001",
+                    "pacific_course_name": "Business Chinese",
+                     "pacific_major":"Modern Language & Literature",
+                    "pacific_course_credit":"4",
+                    "approval_term":  "Spring 2024"
+                }
+            ] },
+
+        {
+            "country": "England",
+            "partner_university": "University of Cape Town"
+        },
+        {
+            "country": "England",
+            "partner_university": "London College of Fashion (UAL)"
+        },
+        {
+            "country": "England",
+            "partner_university": "Queen Mary University of London"
+        },
+        {
+            "country": "England",
+            "partner_university": "University College London"
+        },
+        {
+            "country": "England",
+            "partner_university": "University of Arts, London"
+        },
+        {
+            "country": "England",
+            "partner_university": "University of Westminster"
+        },
+        {
+            "country": "Estonia",
+            "partner_university": "Tallinn University"
+        },
+        {
+            "country": "Estonia",
+            "partner_university": "Tallinn University of Technology"
+        },
+        {
+            "country": "France",
+            "partner_university": "EDC Paris Business School"
+        },
+        {
+            "country": "France",
+            "partner_university": "Institut Catholique de Paris"
+        },
+        {
+            "country": "France",
+            "partner_university": "Institut de Recherche et Coordination Acoustique/Musique"
+        },
+        {
+            "country": "France",
+            "partner_university": "ISC Paris Business School"
+        },
+        {
+            "country": "France",
+            "partner_university": "Sorbonne Université"
+        },
+        {
+            "country": "France",
+            "partner_university": "Université Rennes II"
+        },
+        {
+            "country": "France",
+            "partner_university": "Institut Catholique de Toulouse"
+        },
+        {
+            "country": "France",
+            "partner_university": "Toulouse Business School"
+        },
+        {
+            "country": "Germany",
+            "partner_university": "Sciences Po Toulouse"
+        },
+        {
+            "country": "Greece",
+            "partner_university": "SRH Berlin University"
+        },
+        {
+            "country": "Greece",
+            "partner_university": "National and Kapodistrian University of Athens"
+        },
+        {
+            "country": "Ireland",
+            "partner_university": "Dublin City University"
+        },
+        {
+            "country": "Ireland",
+            "partner_university": "Trinity College Dublin"
+        },
+        {
+            "country": "Ireland",
+            "partner_university": "University College Dublin"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Florence University of the Arts"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Università Bocconi"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Accademia Del Lusso"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Università di Comunicazione e Lingue"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Università Cattolica del Sacro Cuore"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Libera Università Internazionale degli Studi Sociali"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Roma Tre"
+        },
+        {
+            "country": "Netherlands",
+            "partner_university": "Universiteit van Amsterdam, Business School"
+        },
+        {
+            "country": "Netherlands",
+            "partner_university": "Vrije Universiteit Amsterdam"
+        },
+        {
+            "country": "Portugal",
+            "partner_university": "Faculdade De Ciências Sociais E Humanas - Universidade Nova de Lisboa"
+        },
+        {
+            "country": "Portugal",
+            "partner_university": "Instituto Superior De Ciências Do Trabalho e de Empresas – University Institute of Lisbon (ISCTE-IUL) School of Business"
+        },
+        {
+            "country": "Portugal",
+            "partner_university": "Nova School of Business-Universidade Nova de Lisboa"
+        },
+        {
+            "country": "Scotland",
+            "partner_university": "Edinburgh Napier University"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "University of Alicante"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Escola Superior de Comerç Internacional"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Institute of Advanced Architecture of Catalonia"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "The Institut Químic de Sarrià"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Universitat Autònoma de Barcelona"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Universitat de Barcelona"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Universitat de Vic"
+        },
+        {
+
+            "country": "Spain",
+            "partner_university": "Universitat Pompeu Fabra" ,        
+            "courses": [
+                {
+                    "partner_course_code": "51830",
+                    "partner_course_name": "? Ques  es noticia ?Verdad, desinformation y hegemonia",
+                    "pacific_course_code": "SOCI 051",
+                    "pacific_course_name": "Introduction to Gender Studies",
+                     "pacific_major":"Gender Studies",
+                    "pacific_course_credit":"4",
+                    "approval_term": "Spring 2024"
+                },
+                 {
+                    "partner_course_code": "51904",
+                    "partner_course_name": "exos literarios: interpretar,dialogar, crear",
+                    "pacific_course_code": "SPAN 103",
+                    "pacific_course_name": " Introducción a la literatura hispánica",
+                     "pacific_major":"Modern Language & Literature",
+                    "pacific_course_credit":"4",
+                    "approval_term":  "Spring 2024"
+                },
+                {
+                    "partner_course_code": "51858",
+                    "partner_course_name": "Understanding Globalization: Global Issues in Historical Perspectives",
+                    "pacific_course_code": "ANTH 053",
+                    "pacific_course_name": "Cultural Anthropology",
+                    "pacific_major":"Anthropology",
+                    "pacific_course_credit":"4",
+                    "approval_term":  "Spring 2024"
+                },
+                {
+                    "partner_course_code": "55006",
+                    "partner_course_name": "Llengua i Cultura Catalanes I (Group 1)",
+                    "pacific_course_code": "UOPUPF001",
+                    "pacific_course_name": "N/A",
+                    "pacific_course_credit":"N/A",
+                    "pacific_major":"Modern Language & Literature",
+                    "approval_term":  "Spring 2024"
+                }
+
+
+]     
+        },
+
+        {
+            "country": "Spain",
+            "partner_university": "Universidad Antonio Nebrija"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Universidad Carlos III de Madrid"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "The Fundación Ortega y Gasset y Gregorio Marañón (FOM)"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "University of the Balearic Island"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Universidad Pablo de Olavide"
+        },
+        
+        {
+            "country": "Spain",
+            "partner_university": "Estudios Universitarios Superiores de Andalucía"
+        },
+        {
+            "country": "Argentina",
+            "partner_university": "Universidad Católica Argentina"
+        },
+        {
+            "country": "Argentina",
+            "partner_university": "Universidad de Buenos Aires"
+        },
+        {
+            "country": "Argentina",
+            "partner_university": "Universidad Nacional de Arte"
+        },
+        {
+            "country": "Argentina",
+            "partner_university": "Universidad Torcuato Di Tella"
+        },
+        {
+            "country": "Argentina",
+            "partner_university": "Universidad del Salvador"
+        },
+        {
+            "country": "Brazil",
+            "partner_university": "Pontifícia Universidade Católica de São Paulo"
+        },
+        {
+            "country": "Brazil",
+            "partner_university": "Fundação Getulio Vargas"
+        },
+        {
+            "country": "Chile",
+            "partner_university": "Pontificia Universidad Católica de Chile"
+        },
+        {
+            "country": "Chile",
+            "partner_university": "Universidad de Chile"
+        },
+        {
+            "country": "Chile",
+            "partner_university": "Universidad Diego Portales"
+        },
+        {
+            "country": "Dominican Republic",
+            "partner_university": "Pontificia Universidad Católica Madre y Maestra"
+        },
+        {
+            "country": "Mexico",
+            "partner_university": "University Anahuac-Mayab"
+        },
+        {
+            "country": "Mexico",
+            "partner_university": "Universidad Autonoma de Yucatan"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "University of Melbourne"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "Monash University"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "University of New South Wales"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "University of Sydney"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "University of Technology Sydney"
+        },
+       
+        {
+            "country": "Australia",
+            "partner_university": "Monash University"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "University of New South Wales"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "University of Sydney"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "University of Technology Sydney"
+        },
+        {
+            "country": "China",
+            "partner_university": "East China Normal University (ECNU)"
+        },
+        {
+            "country": "Japan",
+            "partner_university": "J.F. Oberlin University"
+        },
+        {
+            "country": "Japan",
+            "partner_university": "Sophia University"
+        },
+        {
+            "country": "New Zealand",
+            "partner_university": "University of Auckland"
+        },
+        {
+            "country": "Singapore",
+            "partner_university": "James Cook University"
+        },
+        {
+            "country": "Singapore",
+            "partner_university": "Singapore Management University (SMU), Lee Kong Chiang School of Business"
+        },
+        {
+            "country": "South Korea",
+            "partner_university": "Yonsei University, School of Business"
+        },
+        {
+            "country": "South Korea",
+            "partner_university": "Hanyang University"
+        },
+        {
+            "country": "Taiwan",
+            "partner_university": "National Taiwan Normal University College of Management"
+        },
+        
+        {
+            "country": "Thailand",
+            "partner_university": "Chiang Mai University"
+        },
+        {
+            "country": "South Korea",
+            "partner_university": "Chonnam National University"
+        },
+        {
+            "country": "India",
+            "partner_university": "Christ University"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "Deakin University"
+        },
+        {
+            "country": "Australia",
+            "partner_university": "Griffith University"
+        },
+        {
+            "country": "Japan",
+            "partner_university": "Hiroshima University"
+        },
+        {
+            "country": "Thailand",
+            "partner_university": "Khon Kaen University"
+        },
+        {
+            "country": "South Korea",
+            "partner_university": "Kookmin University"
+        },
+        {
+            "country": "South Korea",
+            "partner_university": "Korea University"
+        },
+        {
+            "country": "Japan",
+            "partner_university": "Kwansei Gakuin University"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "La Universidad Politécnica de València"
+        },
+        {
+            "country": "France",
+            "partner_university": "L’Université Catholique de Lyon (Catholic University of Lyon)"
+        },
+        {
+            "country": "Germany",
+            "partner_university": "Leuphana University Lüneburg"
+        },
+        {
+            "country": "Sweden",
+            "partner_university": "Linnaeus University"
+        },
+        {
+            "country": "England",
+            "partner_university": "London Metropolitan University"
+        },
+        {
+            "country": "Netherlands",
+            "partner_university": "Maastricht University"
+        },
+        {
+            "country": "New Zealand",
+            "partner_university": "Massey University"
+        },
+        {
+            "country": "Japan",
+            "partner_university": "Nagasaki University of Foreign Studies"
+        },
+        {
+            "country": "Ireland",
+            "partner_university": "National University of Ireland, Galway"
+        },
+        {
+            "country": "China",
+            "partner_university": "Sichuan Normal University"
+        },
+        {
+            "country": "China",
+            "partner_university": "Shanghai Normal University"
+        },
+        {
+            "country": "South Africa",
+            "partner_university": "Stellenbosch University"
+        },
+        {
+            "country": "Netherlands",
+            "partner_university": "The Hague University"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Università della Tuscia"
+        },
+        {
+            "country": "Chile",
+            "partner_university": "Universidad Andrés Bello"
+        },
+        {
+            "country": "Portugal",
+            "partner_university": "Universidade Católica Portuguesa"
+        },
+        {
+            "country": "Cuba",
+            "partner_university": "Instituto de Filosofía"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "Salesian university Institute of Venice (IUSVE University)"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Universidad Del País Vasco (Bilbao and San Sebastián)"
+        },
+        {
+            "country": "Costa Rica",
+            "partner_university": "Universidad Nacional De Costa Rica"
+        },
+        {
+            "country": "Uruguay",
+            "partner_university": "Universidad ORT"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "Universidad Rey Juan Carlos, Vicálvaro"
+        },
+        {
+            "country": "Ireland",
+            "partner_university": "University College Cork"
+        },
+        {
+            "country": "Spain",
+            "partner_university": "University of Alicante"
+        },
+        {
+            "country": "England",
+            "partner_university": "University of Brighton"
+        },
+        {
+            "country": "England",
+            "partner_university": "University of Bristol"
+        },
+        {
+            "country": "Israel",
+            "partner_university": "University of Haifa"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "University of Modena and Reggio Emilia (UNIMORE)"
+        },
+        {
+            "country": "France",
+            "partner_university": "University of Pau"
+        },
+        {
+            "country": "England",
+            "partner_university": "University of Reading"
+        },
+        {
+            "country": "England",
+            "partner_university": "University of Roehampton"
+        },
+        {
+            "country": "Scotland",
+            "partner_university": "University of St Andrews"
+        },
+        {
+            "country": "Scotland",
+            "partner_university": "University of Stirling"
+        },
+        {
+            "country": "Italy",
+            "partner_university": "University of Torino"
+        },
+        {
+            "country": "Vietnam",
+            "partner_university": "VNUK Institute for Research and Executive Education, University of Da Nang"
+        },
+        {
+            "country": "South Korea",
+            "partner_university": "Yonsei University"
+        }
+    ]
+}
