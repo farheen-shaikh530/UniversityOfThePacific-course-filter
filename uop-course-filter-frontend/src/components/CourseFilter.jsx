@@ -20,6 +20,7 @@ const CourseFilter = () => {
   const [loading, setLoading] = useState(true);
   const [filteredUniversities, setFilteredUniversities] = useState([]);
  const [noMatchMessage, setNoMatchMessage] = useState(""); 
+ 
   const isSearchDisabled = !(
     selectedCountry ||
     selectedInstitution ||
@@ -104,7 +105,7 @@ setUopSchools(majorsData.majors);
       setCountries(uniqueCountries);
       setInstitutions(uniqueInstitutions);
     } catch (error) {
-      console.error("❌ Error loading course data:", error);
+      console.error(" Error loading course data:", error);
     } finally {
       setLoading(false);
     }
@@ -129,19 +130,33 @@ useEffect(() => {
         uniMap.set(key, {
           partner_university: entry.partner_university,
           country: entry.country,
-          courses: [], // initialize empty array
+          courses: [],
+          providersSet: new Set(),
         });
       }
 
-      // Push this course to the corresponding university
       uniMap.get(key).courses.push(entry);
+
+      if (entry.providers) {
+        uniMap.get(key).providersSet.add(entry.providers);
+      }
     });
 
-    setFilteredUniversities(Array.from(uniMap.values()));
+ 
+    const universitiesWithProviders = Array.from(uniMap.values()).map((uni) => ({
+      ...uni,
+      providers: Array.from(uni.providersSet),
+    }));
+
+    setFilteredUniversities(universitiesWithProviders);
+
+    console.log("Filtered with providers:", universitiesWithProviders);
+
   } else {
     setFilteredUniversities([]);
   }
 }, [selectedCountry, allCourses]);
+
 
 
 const handleFilter = () => {
@@ -177,11 +192,23 @@ const grouped = filtered.reduce((acc, course) => {
 
 
  const groupedArray = Object.values(grouped);
-setResults(groupedArray);         // ✅ Sent to <UniversityAccordion />
+ const groupedWithProviders = groupedArray.map((uni) => {
+  const providersSet = new Set();
+  uni.courses.forEach((course) => {
+    if (course.providers) providersSet.add(course.providers);
+  });
+  return {
+    ...uni,
+    providers: Array.from(providersSet),
+  };
+});
+
+setResults(groupedWithProviders);
+
+//setResults(groupedArray);       
 setSearchClicked(true);
 setShowResults(true);
 
-// ✅ Set no match message if nothing is found
   if (groupedArray.length === 0) {
     setNoMatchMessage(
       `No courses in ${selectedCountry || "selected country"} for the selected major.`
@@ -250,7 +277,7 @@ const tableCellStyle = {
     }}
   > 
 
-  <h3 style={{ fontSize: "26px", marginBottom: "20px", textAlign: "left", fontFamily: "Bely Display" }}>  Pacific Courses</h3>
+  <h3 style={{ fontSize: "26px", marginTop:"0px" ,marginBottom: "10px", textAlign: "left", fontFamily: "Bely Display" }}>  Pacific Courses</h3>
   
   <label style={{marginTop: "42px",  marginBottom: "8px" , fontFamily: "Ramaraja Regular"}} >Majors:</label>
   
@@ -266,7 +293,7 @@ const tableCellStyle = {
     ))}
 </select>
 
- <label style={{marginTop: "42px",  marginBottom: "8px" , fontFamily: "Ramaraja Regular"}} >Course Code:</label>
+ <label style={{marginTop: "42px",  marginBottom: "8px" , fontFamily: "Ramaraja Regular", marginTop:"0px"}} >Course Code:</label>
     <input
       type="text"
       value={pacificCourseCode}
@@ -300,7 +327,7 @@ const tableCellStyle = {
       minWidth: "400px"
     }}
   > 
-   <h3 style={{ fontSize: "26px", marginBottom: "20px", textAlign: "left", fontFamily: "Bely Display"  }}>  International Course Equivalents</h3>
+   <h3 style={{ fontSize: "26px", marginTop: "0px", marginBottom: "10px", textAlign: "left", fontFamily: "Bely Display"  }}>  International Course Equivalents</h3>
 
    <label style={{marginTop: "42px",  marginBottom: "8px" , fontFamily: "Ramaraja Regular"}} >Country:</label>
    

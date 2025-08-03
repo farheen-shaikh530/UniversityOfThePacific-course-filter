@@ -67,7 +67,13 @@ const UniversityAccordion = ({ universities = [] }) => {
                 borderTopRightRadius: "8px",
               }}
             >
-              {openIndex === index ? "▾" : "▸"} {uni.partner_university} ({uni.country})
+  {openIndex === index ? "▾" : "▸"} {uni.partner_university}
+  {" ("}
+  {uni.country}
+  {uni.providers && uni.providers.length > 0 && ` — ${uni.providers.join(", ")}`}
+  {")"}
+
+
             </div>
 
             {openIndex === index && (
