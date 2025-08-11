@@ -2,6 +2,79 @@ import React, { useState, useEffect } from "react";
 import ResultsTable from "./ResultsTable";
 import UniversityAccordion from "./UniversityAccordion";
 
+// ---- Google Sheets via GViz JSON ----
+const SPREADSHEET_ID = "16qWmlJFOqy0AzZ4F76Cds8ch2VNHlN_n";
+const GID_GENERAL = "1296735863";
+const GID_MAJORS  = "265343630";
+
+const sstr = (v) => (v == null ? "" : String(v));
+
+// Fetch GViz JSON and unwrap setResponse(...)
+async function fetchGvizJSON(gid) {
+   
+
+  const cb = Date.now(); // cache-buster
+  const url = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:json&gid=${gid}&cb=${cb}`;
+
+  const res = await fetch(url, { cache: "no-store" });
+  const text = await res.text();
+
+  if (text.trim().startsWith("<")) {
+    throw new Error("GViz returned HTML — sheet not public?");
+  }
+
+  const json = JSON.parse(
+    text.replace(/^[\s\S]*?setResponse\(/, "").replace(/\);?\s*$/, "")
+  );
+  return json.table;
+}
+
+// Convert GViz table → array of objects using header labels
+function gvizToObjects(table) {
+  const labels = table.cols.map((c) => (c?.label || "").trim());
+  return table.rows.map((r) => {
+    const cells = (r?.c || []).map((c) => (c ? c.v : ""));
+    return Object.fromEntries(labels.map((lab, i) => [lab, cells[i]]));
+  });
+}
+// Normalize a "General" row to stable keys your UI expects
+function normalizeGeneralRow(r) {
+  const pacNameRaw =
+    r["pacific_course_name"] ??
+    r['"pacific_course_name\n"'] ??
+    r['"pacific_course_name"'] ?? "";
+
+  return {
+    partner_university: sstr(r.partner_university ?? r["partner university"]).trim(),
+    country: sstr(r.country ?? r.Country).trim(),
+    partner_course_code: sstr(r.partner_course_code ?? r["partner course code"]).trim(),
+    partner_course_name: sstr(r.partner_course_name ?? r["partner course name"]).trim(),
+    partner_course_credit: sstr(r.partner_course_credit ?? r.Partnere_course_credit).trim(),
+    pacific_course_code: sstr(r.pacific_course_code ?? r["pacific course code"]).trim(),
+    pacific_course_name: sstr(pacNameRaw).replace(/"/g, "").trim(),
+    pacific_major: sstr(r.pacific_major ?? r["pacific major"]).trim(),
+    pacific_course_credit: sstr(r.pacific_course_credit ?? r["pacific course credit"]).trim(),
+    approval_term: sstr(r.approval_term ?? r["approval term"]).trim(),
+    providers: sstr(r.providers ?? r.provider ?? r.Provider).trim(),
+    __raw: r,
+  };
+}
+
+
+function normalizeMajorsRows(rows) {
+  return rows
+    .map((m) => {
+      if (typeof m === "string") return m;
+      // pick the first non-empty cell in the row
+      const firstVal = Object.values(m).find(v => v && String(v).trim() !== "");
+      return firstVal || "";
+    })
+    .map(x => String(x).trim())
+    .filter(Boolean)
+    .sort();
+}
+
+
 const CourseFilter = () => {
   const [countries, setCountries] = useState([]);
   const [institutions, setInstitutions] = useState([]);
@@ -18,42 +91,85 @@ const CourseFilter = () => {
   const [selectedPacificSubjectArea, setSelectedPacificSubjectArea] = useState("");
   const [allCourses, setAllCourses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filteredUniversities, setFilteredUniversities] = useState([]);
- const [noMatchMessage, setNoMatchMessage] = useState(""); 
- 
+  const [noMatchMessage, setNoMatchMessage] = useState("");
+  const [showResults, setShowResults] = useState(false);
+
   const isSearchDisabled = !(
     selectedCountry ||
     selectedInstitution ||
     selectedSubjectArea ||
     selectedMajor ||
     selectedPacificSubjectArea ||
-    pacificCourseCode );
+    pacificCourseCode
+  );
 
-  const [searchClicked, setSearchClicked] = useState(false);
-  const [showResults, setShowResults] = useState(false);
+  // ---- load data once ----
+useEffect(() => {
+  const load = async () => {
+    try {
+     
+        console.log("Loading from GViz...");
 
-  const dropdownStyle = {
-  width: "90%",
-  maxWidth: "400px",
+      // Courses
+      const generalTable = await fetchGvizJSON(GID_GENERAL);
+      const generalRows  = gvizToObjects(generalTable);
+      const normalized   = generalRows.map(normalizeGeneralRow);
 
-  padding: "14px",
-  borderRadius: "6px",
-  border: "1px solid #ccc",
-  fontSize: "17px",
-  lineHeight: "1.6",
-  marginBottom: "20px",
-  backgroundColor: "#fff",
-  backgroundImage: `url("data:image/svg+xml;utf8,<svg fill='%23232323' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")`,
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "right 12px center",
-  backgroundSize: "16px",
-  appearance: "none",        
-  WebkitAppearance: "none",
-  backgroundColor: "#e6ebf1",
-  border: "1px solid #bbb",
-  color: "#333",
 
+      setAllCourses(normalized);
+      setCountries([...new Set(normalized.map(r => r.country))].filter(Boolean).sort());
+      setInstitutions([...new Set(normalized.map(r => r.partner_university))].filter(Boolean).sort());
+
+      // Majors
+      const majorsTable = await fetchGvizJSON(GID_MAJORS);
+      const majorsRows  = gvizToObjects(majorsTable);
+      console.log("majorsRows sample:", majorsRows.slice(0, 5));
+
+      const majorsList  = normalizeMajorsRows(majorsRows);
+
+
+  
+      setUopSchools(majorsList);
+
+ console.log(" Majors list:", majorsList.length, majorsList.slice(0, 10));
+
+
+
+    } catch (e) {
+      console.error("GViz load error:", e);
+      setNoMatchMessage("Failed to load data from Google Sheets.");
+    } finally {
+      setLoading(false);
+    }
   };
+  load();
+}, []);
+
+//  Cascading effect for universities when country changes
+useEffect(() => {
+  console.log(" Selected Country=====", selectedCountry);
+  
+ if (!selectedCountry) {
+    const allUnis = [...new Set(allCourses.map(r => r.partner_university))]
+      .filter(Boolean)
+      .sort();
+    console.log(" Showing ALL universities:", allUnis.length);
+    setInstitutions(allUnis);
+    return;
+  }
+
+  const filteredUnis = [...new Set(
+    allCourses
+      .filter(r => (r.country || "").toLowerCase() === selectedCountry.toLowerCase())
+      .map(r => r.partner_university)
+  )]
+    .filter(Boolean)
+    .sort();
+
+  console.log(` Universities for ${selectedCountry}:`, filteredUnis.length);
+  setInstitutions(filteredUnis);
+}, [selectedCountry, allCourses]);
+
 
   const handleClear = () => {
     setSelectedCountry("");
@@ -64,183 +180,109 @@ const CourseFilter = () => {
     setPacificCourseCode("");
     setResults([]);
     setShowTooltip(false);
+    setShowResults(false);
+    setNoMatchMessage("");
   };
 
-useEffect(() => {
-  const loadAll = async () => {
-    try {
   
-     const uopMajorsRes = await fetch("/uop_majors.json");
-const majorsData = await uopMajorsRes.json();
-setUopSchools(majorsData.majors);
-
-      // Load international university data
-      const equivalentsRes = await fetch("/international_universities.json");
-      const courseEquivalentsData = await equivalentsRes.json();
-
-      const universitiesWithCourses = courseEquivalentsData.universities.filter(
-        (uni) => Array.isArray(uni.courses) && uni.courses.length > 1
-      );
-
-      // Flatten all courses
-      const flatCourses = universitiesWithCourses.flatMap((uni) =>
-        uni.courses.map((course) => ({
-          ...course,
-          partner_university: uni.partner_university,
-          country: uni.country,
-        }))
-      );
-
-      setAllCourses(flatCourses);
-
-      // Set dropdown values
-      const uniqueCountries = [
-        ...new Set(universitiesWithCourses.map((u) => u.country))
-      ].sort();
-
-      const uniqueInstitutions = [
-        ...new Set(universitiesWithCourses.map((u) => u.partner_university))
-      ].sort();
-
-      setCountries(uniqueCountries);
-      setInstitutions(uniqueInstitutions);
-    } catch (error) {
-      console.error(" Error loading course data:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  loadAll();
-}, []);
-
-
-useEffect(() => {
-  if (selectedCountry && allCourses.length > 0) {
-    const matchedUnis = allCourses.filter(
-      (course) => course.country === selectedCountry
-    );
-
-    const uniMap = new Map();
-
-    matchedUnis.forEach((entry) => {
-      const key = `${entry.partner_university}_${entry.country}`;
-
-      if (!uniMap.has(key)) {
-        uniMap.set(key, {
-          partner_university: entry.partner_university,
-          country: entry.country,
-          courses: [],
-          providersSet: new Set(),
-        });
-      }
-
-      uniMap.get(key).courses.push(entry);
-
-      if (entry.providers) {
-        uniMap.get(key).providersSet.add(entry.providers);
-      }
+  const handleFilter = () => {
+    console.log("🔍 Filter parameters:", {
+      selectedCountry,
+      selectedInstitution,
+      selectedSubjectArea,
+      selectedMajor,
+      selectedPacificSubjectArea,
+      pacificCourseCode
     });
 
- 
-    const universitiesWithProviders = Array.from(uniMap.values()).map((uni) => ({
-      ...uni,
-      providers: Array.from(uni.providersSet),
-    }));
+    const filtered = allCourses.filter((course) => {
+      const cCountry = sstr(course.country).trim().toLowerCase();
+      const selCountry = sstr(selectedCountry).trim().toLowerCase();
 
-    setFilteredUniversities(universitiesWithProviders);
+      const cUni = sstr(course.partner_university).trim();
+      const selUni = sstr(selectedInstitution).trim();
 
-    console.log("Filtered with providers:", universitiesWithProviders);
+      const cSub = sstr(course.partner_course_subject);
+      const selSub = sstr(selectedSubjectArea);
 
-  } else {
-    setFilteredUniversities([]);
-  }
-}, [selectedCountry, allCourses]);
+      const cPacSub = sstr(course.pacific_subject_area);
+      const selPacSub = sstr(selectedPacificSubjectArea);
 
+      const cPacCode = sstr(course.pacific_course_code).toLowerCase();
+      const selPacCode = sstr(pacificCourseCode).toLowerCase();
 
+      const cMajor = sstr(course.pacific_major).trim().toLowerCase();
+      const selMajor = sstr(selectedMajor).trim().toLowerCase();
 
-const handleFilter = () => {
-  const filtered = allCourses.filter((course) => {
-    return (
-    (!selectedCountry || (course.country || "").trim().toLowerCase() === selectedCountry.trim().toLowerCase()) &&
-    (!selectedInstitution || (course.partner_university || "").trim() === selectedInstitution.trim()) &&
-    (!selectedSubjectArea || (course.partner_course_subject || "") === selectedSubjectArea) &&
-    (!selectedPacificSubjectArea || (course.pacific_subject_area || "") === selectedPacificSubjectArea) &&
-    (!pacificCourseCode || (course.pacific_course_code || "").toLowerCase().includes(pacificCourseCode.toLowerCase())) &&
-    (!selectedMajor || (course.pacific_major || "").trim().toLowerCase() === selectedMajor.trim().toLowerCase())
-  );
-});
+      return (
+        (!selectedCountry || cCountry === selCountry) &&
+        (!selectedInstitution || cUni === selUni) &&
+        (!selectedSubjectArea || cSub === selSub) &&
+        (!selectedPacificSubjectArea || cPacSub === selPacSub) &&
+        (!pacificCourseCode || cPacCode.includes(selPacCode)) &&
+        (!selectedMajor || cMajor === selMajor)
+      );
+    });
 
-const grouped = filtered.reduce((acc, course) => {
-  const key = `${course.partner_university}__${course.country}`;
-
-  if (!acc[key]) {
-    acc[key] = {
-      partner_university: course.partner_university,
-      country: course.country,
-      courses: [],
-    };
-  }
-
-  //  Only push valid course objects
-  if (!course.noCourses) {
-    acc[key].courses.push(course);
-  }
-  return acc;
-}, {});
+    
 
 
+    const grouped = filtered.reduce((acc, course) => {
+      const key = `${course.partner_university}__${course.country}`;
+      if (!acc[key]) {
+        acc[key] = {
+          partner_university: course.partner_university,
+          country: course.country,
+          courses: [],
+        };
+      }
+      acc[key].courses.push(course);
+      return acc;
+    }, {});
 
- const groupedArray = Object.values(grouped);
- const groupedWithProviders = groupedArray.map((uni) => {
-  const providersSet = new Set();
-  uni.courses.forEach((course) => {
-    if (course.providers) providersSet.add(course.providers);
-  });
-  return {
-    ...uni,
-    providers: Array.from(providersSet),
-  };
-});
+    console.log("📦 Grouped Results:", grouped);
 
-setResults(groupedWithProviders);
+    const groupedArray = Object.values(grouped).map((uni) => {
+      const providersSet = new Set();
+      uni.courses.forEach((c) => c.providers && providersSet.add(c.providers));
+      return { ...uni, providers: Array.from(providersSet) };
+    });
 
-//setResults(groupedArray);       
-setSearchClicked(true);
-setShowResults(true);
+    setResults(groupedArray);
+    setShowResults(true);
+    console.log("✅ Final Search Results:", groupedArray);
 
-  if (groupedArray.length === 0) {
     setNoMatchMessage(
-      `No courses in ${selectedCountry || "selected country"} for the selected major.`
+      groupedArray.length === 0
+        ? `No courses in ${selectedCountry || "selected country"} for the selected major.`
+        : ""
     );
-  } else {
-    setNoMatchMessage(""); // clear message if results exist
-  }
-  
+  }; // <-- 🟢 CLOSE handleFilter here
+
+  const dropdownStyle = {
+  width: "90%",
+  maxWidth: "400px",
+  padding: "14px",
+  borderRadius: "6px",
+  border: "1px solid #ccc",
+  fontSize: "17px",
+  lineHeight: "1.6",
+  marginBottom: "20px",
+  backgroundColor: "#e6ebf1",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "right 12px center",
+  backgroundSize: "16px",
+  appearance: "none",
+  WebkitAppearance: "none",
+  color: "#333",
 };
 
- const tableHeaderStyle = {
-  padding: "6px 8px",
-  backgroundColor: "#E65300",
-  color: "white",
-  textAlign: "left",
-  fontWeight: "bold",
-  fontSize: "13px",
-};
+  if (loading) return <div>Loading...</div>;
 
-const tableCellStyle = {
-  padding: "6px 8px",
-  fontSize: "12.5px",
-  borderBottom: "1px solid #ccc",
-  height: "70px",  // increases row height
-  overflowWrap: "break-word",  // handle long text
-
-};
   return (
-
     <div
       style={{
-        fontFamily: "Neuzeit Grotesk Regular, Ramaraj Regular" ,
+        fontFamily: "Neuzeit Grotesk Regular, Ramaraj Regular",
         maxWidth: "1200px",
         margin: "0 auto",
         padding: "40px 20px",
@@ -251,193 +293,208 @@ const tableCellStyle = {
         width: "100%",
       }}
     >
+      {/* Two-column layout */}
+      <div
+        style={{
+          width: "90%",
+          maxWidth: "1200px",
+          display: "flex",
+          justifyContent: "center",
+          gap: "80px",
+          alignItems: "flex-start",
+          marginBottom: "40px",
+        }}
+      >
+        {/* Pacific Courses */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+            flex: 1,
+            minHeight: "420px",
+            minWidth: "400px",
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "26px",
+              marginTop: "0px",
+              marginBottom: "10px",
+              textAlign: "left",
+              fontFamily: "Bely Display",
+            }}
+          >
+            Pacific Courses
+          </h3>
 
-{/* Two-column layout */}
-<div
-  style={{
-     width: "90%",          
-    maxWidth: "1200px",
-    display: "flex",
-    justifyContent: "center",
-    gap: "80px",
-    alignItems: "flex-start",
-    marginBottom: "40px",
-  }}
->
+          <label style={{ marginTop: "42px", marginBottom: "8px", fontFamily: "Ramaraja Regular" }}>
+            Majors:
+          </label>
 
-  {/*  UOP Equivalent Courses */}
-    <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      gap: "10px",
-      flex: 1,
-      minHeight: "420px",
-      minWidth: "400px"
-    }}
-  > 
+          <select
+            value={selectedMajor}
+            onChange={(e) => setSelectedMajor(e.target.value)}
+            style={dropdownStyle}
+          >
+            <option value=""> </option>
+            {uopSchools.map((s, i) => (
+              <option key={`${s}-${i}`} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
 
-  <h3 style={{ fontSize: "26px", marginTop:"0px" ,marginBottom: "10px", textAlign: "left", fontFamily: "Bely Display" }}>  Pacific Courses</h3>
-  
-  <label style={{marginTop: "42px",  marginBottom: "8px" , fontFamily: "Ramaraja Regular"}} >Majors:</label>
-  
-   <select value={selectedMajor} onChange={(e) => setSelectedMajor(e.target.value)} style={dropdownStyle} >
-  <option value=""> </option>
-  
-  {[...new Set(uopSchools)]
-    .filter((s) => s && s.trim() !== "")
-    .map((s, index) => (
-      <option key={`${s}-${index}`} value={s}>
-        {s}
-      </option>
-    ))}
-</select>
+          <label style={{ marginBottom: "8px", fontFamily: "Ramaraja Regular" }}>
+            Course Code:
+          </label>
+          <input
+            type="text"
+            value={pacificCourseCode}
+            onChange={(e) => setPacificCourseCode(e.target.value)}
+            placeholder="e.g., HIST 120"
+            style={{
+              padding: "10px",
+              fontSize: "14px",
+              borderRadius: "6px",
+              border: "1px solid #ccc",
+              width: "76%",
+              maxWidth: "400px",
+              height: "35px",
+              maxHeight: "50px",
+              marginBottom: "20px",
+              backgroundColor: "#f9f9f9",
+            }}
+          />
+        </div>
 
- <label style={{marginTop: "42px",  marginBottom: "8px" , fontFamily: "Ramaraja Regular", marginTop:"0px"}} >Course Code:</label>
-    <input
-      type="text"
-      value={pacificCourseCode}
-      onChange={(e) => setPacificCourseCode(e.target.value)}
-      placeholder="e.g., HIST 120"
+        {/* International Course Equivalents */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+            flex: 1,
+            minHeight: "420px",
+            minWidth: "400px",
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "26px",
+              marginTop: "0px",
+              marginBottom: "10px",
+              textAlign: "left",
+              fontFamily: "Bely Display",
+            }}
+          >
+            International Course Equivalents
+          </h3>
 
-      style={{
-      padding: "10px",
-      fontSize: "14px",
-      borderRadius: "6px",
-      border: "1px solid #ccc",
-      width: "76%",            //  Your desired width
-      maxWidth: "400px",       //  Limits width on larger screens
-      height: "35px",          // Your desired height
-      maxHeight: "50px",
-      marginBottom: "20px",
-      backgroundColor: "#f9f9f9", 
-      }} />
-  </div>
-  
-{/*  UOP Equivalent Courses */}
+          <label style={{ marginTop: "42px", marginBottom: "8px", fontFamily: "Ramaraja Regular" }}>
+            Country:
+          </label>
+          <select
+            value={selectedCountry}
+            onChange={(e) => setSelectedCountry(e.target.value)}
+            style={dropdownStyle}
+          >
+            <option value=""> </option>
+            {countries.map((c, i) => (
+              <option key={`${c}-${i}`} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
 
-  {/*  International Courses */}
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      gap: "10px",
-      flex: 1,
-      minHeight: "420px",
-      minWidth: "400px"
-    }}
-  > 
-   <h3 style={{ fontSize: "26px", marginTop: "0px", marginBottom: "10px", textAlign: "left", fontFamily: "Bely Display"  }}>  International Course Equivalents</h3>
+          <label>University / Institution:</label>
+          <select
+            value={selectedInstitution}
+            onChange={(e) => setSelectedInstitution(e.target.value)}
+            style={dropdownStyle}
+          >
+            <option value=""> </option>
+            {institutions.map((iName, i) => (
+              <option key={`${iName}-${i}`} value={iName}>
+                {iName}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
 
-   <label style={{marginTop: "42px",  marginBottom: "8px" , fontFamily: "Ramaraja Regular"}} >Country:</label>
-   
+      {/* Buttons */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          marginBottom: "0px",
+          alignItems: "flex-start",
+        }}
+      >
+        <button
+          onClick={handleFilter}
+          disabled={isSearchDisabled}
+          title="Please be more specific in your search"
+          style={{
+            backgroundColor: "#E65300",
+            color: "#fff",
+            border: "none",
+            padding: "10px 28px",
+            fontWeight: "bold",
+            fontSize: "16px",
+            borderRadius: "6px",
+            width: "120px",
+            cursor: isSearchDisabled ? "not-allowed" : "pointer",
+            opacity: isSearchDisabled ? 0.6 : 1,
+          }}
+        >
+          Search
+        </button>
 
-   <select
-  value={selectedCountry}
-  onChange={(e) => setSelectedCountry(e.target.value)}
-  style={dropdownStyle}
->
-  <option value=""> </option>
- {countries
-  .filter((c) => c && c.trim() !== "")
-  .map((c, index) => (
-    <option key={`${c}-${index}`} value={c}>
-      {c}
-    </option>
-))}
+        <button
+          onClick={handleClear}
+          style={{
+            backgroundColor: " #A29889",
+            color: "#fff",
+            border: "none",
+            padding: "10px 28px",
+            fontWeight: "bold",
+            fontSize: "16px",
+            borderRadius: "6px",
+            width: "120px",
+            cursor: "pointer",
+          }}
+        >
+          Clear
+        </button>
+      </div>
 
-</select>
-    <label>University / Institution:</label>
-<select
-  value={selectedInstitution}
-  onChange={(e) => setSelectedInstitution(e.target.value)}
-  style={dropdownStyle}
->
-  <option value=""> </option>
-  {institutions
-    .filter((i) => i && i.trim() !== "")
-    .map((i, index) => (
-      <option key={`${i}-${index}`} value={i.trim()}>
-        {i.trim()}
-      </option>
-    ))}
-</select>
-</div>
+      {showResults && results.length > 0 && (
+        <UniversityAccordion universities={results} />
+      )}
 
-  </div>
-  {/*  International Courses */}
-
-
-
-  {/* 🔍 Buttons */}
-
-<div style={{ display: "flex", justifyContent: "center", gap: "20px", marginBottom: "0px", alignItems: "flex-start" }}>
-
-<button
-  onClick={handleFilter}
-  disabled={isSearchDisabled}
-  title="Please be more specific in your search"
-  style={{
-    backgroundColor: "#E65300",
-    color: "#fff",
-    border: "none",
-    padding: "10px 28px",
-    fontWeight: "bold",
-    fontSize: "16px",
-    borderRadius: "6px",
-    width: "120px",
-    cursor: isSearchDisabled ? "not-allowed" : "pointer",
-    opacity: isSearchDisabled ? 0.6 : 1,
-  }}
->
-  Search
-</button>
-
-    <button
-      onClick={handleClear}
-      style={{
-        backgroundColor: " #A29889",
-        color: "#fff",
-        border: "none",
-        padding: "10px 28px",
-        fontWeight: "bold",
-        fontSize: "16px",
-        borderRadius: "6px",
-        width: "120px",
-        cursor: "pointer",
-      }}
-    >
-      Clear
-    </button>
-  </div>
- 
-{showResults && results.length > 0 && ( <UniversityAccordion universities={results} /> )}
-
-{showResults && results.length === 0 && noMatchMessage && (
-  <div
-    style={{
-      marginTop: "20px",
-      padding: "14px",
-      backgroundColor: "#f6f6f6",
-      borderLeft: "4px solid #E65300",
-      borderRadius: "4px",
-      fontSize: "16px",
-      color: "#333",
-      width:"85%",
-      fontFamily: "Neuzeit Grotesk Light",
-    }}
-  >
-    {noMatchMessage}
-  </div>
-)}
-
-
- 
-</div> 
-
+      {showResults && results.length === 0 && noMatchMessage && (
+        <div
+          style={{
+            marginTop: "20px",
+            padding: "14px",
+            backgroundColor: "#f6f6f6",
+            borderLeft: "4px solid #E65300",
+            borderRadius: "4px",
+            fontSize: "16px",
+            color: "#333",
+            width: "85%",
+            fontFamily: "Neuzeit Grotesk Light",
+          }}
+        >
+          {noMatchMessage}
+        </div>
+      )}
+    </div>
   );
 };
 
 
 export default CourseFilter;
-
